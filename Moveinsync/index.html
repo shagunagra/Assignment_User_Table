@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Home Page</title>
+	<link rel="stylesheet" href="./index.css">
+</head>
+<body>
+
+	<!--User Deatils table-->
+
+	<table id="mytable">
+		<h1 class="tablehead">User Table:</h1>
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Id</th>
+				<th>City</th>
+				<th>Degree</th>
+				<th>Timestamp</th>
+			</tr>
+		</thead>
+		<tbody></tbody>
+	</table>
+	<button type="button" id="updateButton" onclick="document.getElementById('add').style.display='block'">Add User</button>
+
+	<!--User Deatils table end-->
+
+	<!--User get detail form-->
+
+	<form id="add">
+		<div class="inner-form">
+			<h1 class="head">Enter the details</h1>
+			<span onclick="document.getElementById('add').style.display='none'" class="close">&times;</span><br>
+			<hr>
+			<div class="mydiv">
+				<label for="name">Name</label><br>
+				<input type="text" name="name" placeholder="Enter your name" id="name"><br><br>
+				<label for="city">City</label><br>
+				<select name="city" id="city">
+					<option selected="true" disabled="disabled">Enter your city</option>
+					<option value="bengaluru">Bengaluru</option>
+					<option value="chennai">Chennai</option>
+					<option value="delhi">Delhi</option>
+					<option value="mumbai">Mumbai</option>
+				</select><br><br>
+				<label for="degree">Degree</label><br>
+				<input type="text" name="degree" placeholder="Enter degree" id="degree"><br><br>
+				<input type="button" name="save" value="Save" onclick="Adduser()" id="save">	
+			</div>
+		</div>
+	</form>
+
+	<!--User get detail form end-->
+
+
+	<script src="./index.js" type="text/javascript" charset="utf-8" async defer></script>
+</body>
+</html>
